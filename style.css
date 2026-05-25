@@ -1,0 +1,153 @@
+/* Login — palet: Lime #00DD00 & Putih #FFFFFF */
+:root {
+    --lime: #00dd00;
+    --white: #ffffff;
+    --lime-soft: rgba(0, 221, 0, 0.14);
+    --lime-mid: rgba(0, 221, 0, 0.35);
+    --lime-shadow: rgba(0, 221, 0, 0.22);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(165deg, var(--lime) 0%, var(--white) 55%, var(--white) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--lime);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--white);
+    border: 3px solid var(--lime);
+    border-radius: 16px;
+    padding: 40px 36px;
+    text-align: center;
+    box-shadow: 0 16px 40px var(--lime-shadow);
+}
+
+.login-card h2 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--lime);
+}
+
+.login-card > p {
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+    color: rgba(0, 221, 0, 0.82);
+    line-height: 1.45;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    border: 2px solid var(--lime);
+    margin-bottom: 14px;
+    padding: 4px 4px 4px 14px;
+    border-radius: 12px;
+    transition: box-shadow 0.2s;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 3px var(--lime-soft);
+}
+
+.input-group span {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--lime);
+    padding: 12px 8px 12px 0;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: rgba(0, 221, 0, 0.45);
+}
+
+.input-group button[type="button"] {
+    flex-shrink: 0;
+    background: var(--lime-soft);
+    border: 2px solid var(--lime);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--lime);
+    font-size: 1rem;
+    line-height: 1;
+    transition: background 0.15s;
+}
+
+.input-group button[type="button"]:hover {
+    background: var(--lime-mid);
+    color: var(--white);
+}
+
+.btn-login {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 16px;
+    border: 3px solid var(--lime);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--white);
+    background: var(--lime);
+    box-shadow: 0 4px 20px var(--lime-shadow);
+    transition: filter 0.2s, transform 0.12s;
+}
+
+.btn-login:hover {
+    filter: brightness(1.06);
+}
+
+.btn-login:active {
+    transform: scale(0.99);
+}
+
+.footer {
+    margin-top: 22px;
+    font-size: 0.9rem;
+    color: rgba(0, 221, 0, 0.85);
+}
+
+.footer a {
+    color: var(--lime);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--lime);
+}
+
+.footer a:hover {
+    color: var(--white);
+    background: var(--lime);
+    border-bottom-color: var(--lime);
+}
